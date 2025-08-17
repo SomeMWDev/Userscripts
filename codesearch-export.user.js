@@ -59,38 +59,38 @@
 
 
     function addButton(node) {
-        $(node).find("#cs-result-Default").parent().append($(button));
+        $(node).find('#cs-result-Default').parent().append($(button));
         const $exportMenu = $(exportMenu);
         $(node).after($exportMenu);
-        $exportMenu.find("#copy-export-result").click(() => {
+        $exportMenu.find('#copy-export-result').click(() => {
             let result = "";
-            const repoTemplate = $exportMenu.find("#export-result-repo-template").val();
-            const fileTemplate = $exportMenu.find("#export-result-file-template").val();
-            const exportFiles = $exportMenu.find("#export-options-include-files").is(":checked");
-            $(".cs-results h2").each((_, repoTitle) => {
+            const repoTemplate = $exportMenu.find('#export-result-repo-template').val();
+            const fileTemplate = $exportMenu.find('#export-result-file-template').val();
+            const exportFiles = $exportMenu.find('#export-options-include-files').is(':checked');
+            $('.cs-results h2').each((_, repoTitle) => {
                 const repoName = $(repoTitle).text();
                 if (repoName && repoName !== '') {
-                    result += repoTemplate.replace('$1', () => repoName) + "\n";
+                    result += repoTemplate.replace('$1', () => repoName) + '\n';
                 }
                 if (exportFiles) {
-                    $(repoTitle).parent().find(".card-header > a.link-secondary").each((_, fileLink) => {
+                    $(repoTitle).parent().find('.card-header > a.link-secondary').each((_, fileLink) => {
                         const fileName = $(fileLink).text();
                         if (fileName && fileName !== '') {
-                            result += fileTemplate.replace('$1', () => fileName) + "\n";
+                            result += fileTemplate.replace('$1', () => fileName) + '\n';
                         }
                     });
                 }
             });
             navigator.clipboard.writeText(result);
             console.log(result);
-            $exportMenu.find("#copy-export-result").removeClass("btn-primary").addClass("btn-success");
+            $exportMenu.find('#copy-export-result').removeClass('btn-primary').addClass('btn-success');
         });
 
-        $exportMenu.find("#export-options-include-files").change(function() {
+        $exportMenu.find('#export-options-include-files').change(function() {
             if (this.checked) {
-                $("#export-result-file-template").removeAttr("disabled");
+                $('#export-result-file-template').removeAttr('disabled');
             } else {
-                $("#export-result-file-template").attr("disabled", true);
+                $('#export-result-file-template').attr('disabled', true);
             }
         });
     }
@@ -99,7 +99,7 @@
         mutations.forEach((mutation) => {
             mutation.addedNodes.forEach((node) => {
                 if (node.nodeType === Node.ELEMENT_NODE) {
-                    if (node.matches("div:has(#cs-result-Default)")) {
+                    if (node.matches('div:has(#cs-result-Default)')) {
                         addButton(node);
                     }
                 }
