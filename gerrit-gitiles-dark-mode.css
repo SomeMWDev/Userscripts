@@ -1,0 +1,25 @@
+body {
+  background-color: #2e3440;
+}
+
+.Site-Footer, .Footer,
+.Site-Header, .Header {
+  background: #3b4252;
+}
+
+.Breadcrumbs-crumb, .u-sha1 > a, a.Header-menuItem {
+  color: #cc7700;
+}
+
+.Site-content, .Header-title,
+.Header-menuItem {
+  filter: invert(1);
+}
+
+.u-sha1 {
+  background: #c4bdad;
+}
+
+.FileContents-lineContents:target {
+  background: #c6b187;
+}
