@@ -1,0 +1,256 @@
+:root {
+  --color-dark-background-deep: #242933;
+  --color-dark-background: #2e3440;
+  --color-dark-elevated: #3b4252;
+  --color-dark-highlight: #434c5e;
+  --color-dark-attention: #4c566a;
+
+  --color-light-primary: #d8dee9;
+  --color-light-subtle: #e5e9f0;
+  --color-light-elevated: #eceff4;
+
+  --color-green-highlight: #8fbcbb;
+  
+  --color-blue-highlight: #88c0d0;
+  --color-blue-darkened: #81a1c1;
+  --color-blue-tertiary: #5e81ac;
+
+  --color-red: #bf616a;
+  --color-orange: #d08770;
+  --color-yellow: #ebcb8b;
+  --color-green: #a3be8c;
+  --color-purple: #b48ead;
+
+  --border-radius-card: 5px;
+}
+
+div.phabricator-main-menu.phabricator-main-menu-background,
+body {
+  background-color: var(--color-dark-background-deep);
+}
+
+div.phabricator-main-menu.phabricator-main-menu-background {
+  padding: 5px;
+}
+
+div.phabricator-nav-content.plb, div.phui-crumbs-view.phui-crumbs-border,
+div.phabricator-nav-local.phabricator-side-menu {
+  background-color: var(--color-dark-background);
+}
+
+.phui-timeline-major-event .phui-timeline-content .phui-timeline-core-content,
+.phui-comment-textarea-control,
+.phui-comment-submit-control,
+.phui-comment-has-actions,
+.aphront-dialog-body,
+.phui-object-box-hidden-content {
+  background-color: var(--color-dark-background);
+  border-color: transparent;
+}
+
+.phui-object-box-hidden-content {
+  border-radius: var(--border-radius-card);
+}
+
+.phui-box-border,
+.phui-oi:not(.phuix-dropdown-menu *),
+.phui-object-box .phui-header-shell {
+  background-color: var(--color-dark-elevated); 
+}
+
+.phui-object-box .phui-box.phui-feed-story,
+.phui-header-shell {
+  border-bottom-color: var(--color-dark-attention);
+}
+
+.phui-object-box .phui-oi-list-header,
+.phui-comment-form-view .phui-comment-action-bar,
+.phui-timeline-major-event .phui-timeline-title {
+  background-color: var(--color-dark-elevated); 
+  border-top-color: transparent;
+  border-bottom-color: var(--color-dark-attention);
+}
+
+.phui-header-shell {
+  border-top-color: transparent;
+}
+
+.red {
+  color: var(--color-red);
+}
+
+.orange {
+  color: var(--color-orange);
+}
+
+.yellow {
+  color: var(--color-yellow);
+}
+
+.violet {
+  color: var(--color-purple);  
+}
+
+.sky {
+  color: var(--color-blue-highlight);
+}
+
+input.jx-typeahead-placeholder {
+  background-color: var(--color-dark-highlight);
+}
+
+.phabricator-main-menu-search-dropdown {
+  background-color: var(--color-dark-attention);
+}
+
+.phui-font-fa:not(.red,.orange,.yellow,.violet,.sky) {
+  color: var(--color-light-primary);
+}
+
+.phabricator-main-menu-alert-icon {
+  color: var(--color-light-subtle);
+}
+
+a {
+  color: var(--color-blue-darkened);
+}
+
+.project-card-view,
+.phui-hovercard-wrapper .phui-oi,
+.phuix-dropdown-menu,
+.phui-hovercard-container,
+.aphront-dialog-view,
+.aphront-dialog-tail,
+div.jx-typeahead-results {
+  background-color: var(--color-dark-highlight);
+  border-radius: var(--border-radius-card);
+  border-color: var(--color-dark-attention);
+}
+
+.phui-oi-frame {
+  border-color: transparent;
+}
+
+.phui-list-item-selected {
+  border-radius: 0 var(--border-radius-card) var(--border-radius-card) 0;
+  background-color: var(--color-dark-highlight);
+}
+
+.people-menu-image-container {
+  background-color: var(--color-dark-elevated);
+}
+
+.phui-box.phui-box-blue-property, .phui-box-border {
+  border-radius: var(--border-radius-card);
+  border-color: var(--color-dark-attention);
+}
+
+.device-desktop .phui-curtain-panel + .phui-curtain-panel, .device-desktop .phabricator-action-list-view + .phui-curtain-panel,
+.phui-property-list-section-header,
+div.jx-typeahead-results a.jx-result + a.jx-result {
+  border-color: var(--color-dark-attention);
+}
+
+.phui-timeline-value, .phui-two-column-header .phui-header-header {
+  color: var(--color-light-elevated)
+}
+
+.phui-timeline-extra, .phui-timeline-extra, .phui-timeline-extra a, .phabricator-content-source-view {
+  color: var(--color-blue-darkened);
+}
+
+.phabricator-notification-menu,
+.phabricator-notification-footer {
+  background-color: var(--color-dark-elevated);
+  border-color: var(--color-dark-attention);
+}
+
+.phabricator-notification-menu {
+  border-radius: var(--border-radius-card);
+}
+
+.phabricator-notification + .phabricator-notification {
+  border-color: var(--color-dark-attention);
+}
+
+.device-desktop .phabricator-notification-menu .phabricator-notification:hover,
+div.jx-typeahead-results a.jx-result:hover, div.jx-typeahead-results a.focused {
+  background-color: var(--color-dark-attention);
+}
+
+.phui-info-view {
+  background-color: var(--color-dark-elevated);
+}
+
+.phabricator-action-view-type-divider {
+  border-color: var(--color-dark-attention);
+}
+
+.phui-badge-mini .phui-font-fa {
+  color: var(--color-dark-highlight)
+}
+
+.phui-two-column-view .phui-two-column-header {
+  background-color: var(--color-dark-background);
+  border-color: var(--color-dark-attention);
+}
+
+.dashboard-view .phui-object-box {
+  padding: 5px;
+}
+
+select {
+  background: var(--color-dark-attention) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right 8px center;
+  border-color: transparent;
+}
+
+.phui-comment-has-actions button {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-blue-darkened),
+    var(--color-blue-tertiary)
+  );
+  border-color: var(--color-dark-attention);
+  border-radius: var(--border-radius-card);
+  color: var(--color-light-elevated);
+}
+
+.phui-comment-form-view .aphront-form-input .remarkup-assist-textarea,
+.remarkup-assist-bar {
+  border-color: var(--color-dark-attention);
+}
+
+.phui-comment-form-view .aphront-form-input .remarkup-assist-textarea:focus,
+.remarkup-inline-preview,
+.aphront-form-control .remarkup-control-fullscreen-mode textarea.remarkup-assist-textarea {
+  background-color: var(--color-dark-elevated);
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], div.jx-tokenizer-container {
+  background-color: var(--color-dark-background);
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, div.jx-tokenizer-container-focused,
+button:focus, a.button:focus {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(from var(--color-blue-highlight) r g b / 50%);
+}
+
+::selection {
+  background-color: var(--color-blue-tertiary);
+  color: var(--color-light-elevated);
+}
+
+button.token-button,
+a.button-grey, a.button-grey:visited {
+  background-color: var(--color-dark-elevated);
+  border-color: var(--color-dark-attention);
+}
+
+a.button-grey, a.button-grey:visited {
+  background-image: unset;
+}
+
+.phabricator-source-code {
+  background-color: var(--color-dark-background);
+}
+
