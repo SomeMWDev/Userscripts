@@ -115,6 +115,10 @@ a {
   color: var(--color-blue-darkened);
 }
 
+.phui-oi.phui-oi-disabled .phui-oi-link, .phui-oi.phui-oi-disabled .phui-oi-link a {
+  color: var(--color-dark-attention);
+}
+
 .project-card-view,
 .phui-hovercard-wrapper .phui-oi,
 .phuix-dropdown-menu,
@@ -252,5 +256,10 @@ a.button-grey, a.button-grey:visited {
 
 .phabricator-source-code {
   background-color: var(--color-dark-background);
+}
+
+.aphront-table-view tr.highlighted {
+  background-color: unset;
+  border: 2px dotted var(--color-yellow);
 }
 
