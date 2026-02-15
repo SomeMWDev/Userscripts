@@ -19,7 +19,7 @@
     const $queryField = $('input[name=q]');
 
     const $searchButton = $('#cs-form-submitIdle');
-    const $newButton = $searchButton.clone().attr('id', 'plaintext-search').removeAttr('hidden').removeAttr('type').css('position', 'absolute').text('Plain');
+    const $newButton = $searchButton.clone().attr('id', 'plaintext-search').removeAttr('hidden').removeAttr('type').css('position', 'absolute').css('margin-left', '5px').text('Plain');
     $searchButton.parent().append($newButton);
 
     $newButton.click((event) => {
