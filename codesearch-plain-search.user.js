@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Allow plaintext searching in MediaWiki Codesearch
 // @namespace    http://tampermonkey.net/
-// @version      2025-08-17
+// @version      2026-02-15
 // @description  Adds a "Plain" button next to the search button in MW Codesearch that escapes regex characters before submitting the query
 // @author       SomeRandomDeveloper
 // @match        https://codesearch.wmcloud.org/*
