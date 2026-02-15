@@ -15,7 +15,7 @@
 
     // match extensions and skins hosted on gerrit
     const gerritRegex = /^(Extension|Skin):.+$/;
-    // match projects on Github that follow the gerrit repo naming scheme, and gerrit repo names without links
+    // match projects on Github that follow the gerrit repo naming scheme, and unformatted gerrit repo names
     const alternativeRegex = /^[a-zA-Z0-9._-]*\/?mediawiki[-/](extensions|skins)[-/]([a-zA-Z0-9._-]+)$/;
 
     function createLink(text, href) {
