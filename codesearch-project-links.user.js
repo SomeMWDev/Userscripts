@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Add mediawiki.org links to repo titles in CodeSearch
 // @namespace    http://tampermonkey.net/
-// @version      2025-08-05
+// @version      2026-02-15
 // @description  Adds links pointing to the mediawiki.org pages of repos in MediaWiki Codesearch
 // @author       SomeRandomDeveloper
 // @match        https://codesearch.wmcloud.org/*
@@ -15,8 +15,8 @@
 
     // match extensions and skins hosted on gerrit
     const gerritRegex = /^(Extension|Skin):.+$/;
-    // match projects on Github that follow the gerrit repo naming scheme
-    const githubRegex = /^[a-zA-Z0-9._-]+\/mediawiki-(extensions|skins)-([a-zA-Z0-9._-]+)$/;
+    // match projects on Github that follow the gerrit repo naming scheme, and gerrit repo names without links
+    const alternativeRegex = /^[a-zA-Z0-9._-]*\/?mediawiki[-/](extensions|skins)[-/]([a-zA-Z0-9._-]+)$/;
 
     function createLink(text, href) {
         const a = document.createElement('a');
@@ -30,8 +30,8 @@
 
         if (gerritRegex.test(projectName)) {
             sectionTitle.innerHTML = createLink(projectName, `https://mediawiki.org/wiki/${projectName}`);
-        } else if (githubRegex.test(projectName)) {
-            const match = projectName.match(githubRegex);
+        } else if (alternativeRegex.test(projectName)) {
+            const match = projectName.match(alternativeRegex);
             const type = match[1].charAt(0).toUpperCase() + match[1].slice(1, -1);
             const name = match[2];
             sectionTitle.innerHTML = createLink(projectName, `https://mediawiki.org/wiki/${type}:${name}`);
