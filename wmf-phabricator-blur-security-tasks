@@ -1,0 +1,9 @@
+div.phui-oi-frame:has(a[title~="XSS"]):not(:hover),
+div.phui-oi-frame:has(a[title~="security"]):not(:hover),
+div.phui-oi-frame:has(a[title~="Security"]):not(:hover),
+div.phui-oi-frame:has(a[title~="vulnerability"]):not(:hover),
+div.phui-oi-frame:has(a[href="/tag/security/"]):not(:hover),
+div.phui-feed-story:has(a[href="/tag/security/"]):not(:hover)
+{
+  filter: blur(10px) !important;
+}
